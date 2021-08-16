@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SalesWebMCV.Models;
+using SalesWebMCV.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -20,11 +20,16 @@ namespace SalesWebMCV.Controllers
 
         public IActionResult Index()
         {
+            @ViewData["name"] = "Jairo Gomes Evaristo";
+            @ViewData["email"] = "jairo.fitbank.com.br";
+
             return View();
         }
 
         public IActionResult Privacy()
         {
+            ViewData["email"] = "jairo.evaristo@fitbank.com.br";
+
             return View();
         }
 
